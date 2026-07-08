@@ -145,6 +145,7 @@
     </dependencies>
 
     <build>
+        <finalName>JiraRush</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -178,6 +179,15 @@
     </build>
 
     <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>default</spring.profiles.active>
+            </properties>
+        </profile>
         <profile>
             <id>prod</id>
             <properties>
